@@ -7,7 +7,7 @@ OS="$(uname -s | tr 'A-Z' 'a-z')"
 
 requisites() {
 
-    dependencies="vim git curl"
+    dependencies="nvim git curl"
 
     for dep in $(echo "${dependencies}" | xargs -n 1) ; do
         if ! command -v "${dep}" 2> /dev/null; then
