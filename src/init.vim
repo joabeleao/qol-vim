@@ -191,3 +191,6 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 " Enable matching syntax
 let g:loaded_matchit = 1
+
+" Disable autoload session
+let g:session_autoload = 'no'
