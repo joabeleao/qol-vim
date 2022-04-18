@@ -45,12 +45,17 @@ install() {
     rm -rf fonts
 
     if ! nvim +:PlugInstall +q +q && nvim +:VimBootstrapUpdate +q +q; then
-        echo "error on install vim plugins"
+        echo "Error installing vim plugins. Please check."
+        return 1
+    fi
+
+    if ! nvim +:UpdateRemotePlugins +q +q; then
+        echo "Error updating plugins. Please check."
         return 1
     fi
 
     if ! mkdir -p ~/.vim/backup/; then
-        echo "error on create vim backup directory"
+        echo "Error creating vim backup directory. Please check."
         return 1
     fi
 }
