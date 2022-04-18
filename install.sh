@@ -7,7 +7,7 @@ OS="$(uname -s | tr 'A-Z' 'a-z')"
 
 requisites() {
 
-    dependencies="nvim git curl"
+    dependencies="nvim git curl pip3"
 
     for dep in $(echo "${dependencies}" | xargs -n 1) ; do
         if ! command -v "${dep}" 2> /dev/null; then
@@ -25,6 +25,9 @@ install() {
 
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+    # Install support for python plugins
+    pip3 install pynvim
 
     # copy vim init
     if ! cp -av src/init.vim* ~/.config/nvim/; then
