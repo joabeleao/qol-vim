@@ -17,7 +17,6 @@ Plug 'vim-airline/vim-airline' " bottom status and navigation bar
 Plug 'terryma/vim-multiple-cursors' " hence the name
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'TaDaa/vimade' " Show current document
 Plug 'majutsushi/tagbar'
 
