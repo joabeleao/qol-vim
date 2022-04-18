@@ -193,4 +193,5 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 let g:loaded_matchit = 1
 
 " Disable autoload session
+let g:session_autosave = 'no'
 let g:session_autoload = 'no'
