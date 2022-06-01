@@ -1,6 +1,11 @@
-### qol-vim
+# qol-vim
 
 Vim customization for a better quality of life
+
+### Requirements
+- neovim
+- python3
+- python3-pip
 
 ### Installation
 
